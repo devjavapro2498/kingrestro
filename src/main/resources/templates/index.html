@@ -58,19 +58,19 @@
                     <!--th:href="@{/about/}"-->
                     <a th:href="@{/}" class="nav-item nav-link active">Home</a>
                     <a th:href="@{/about}"  class="nav-item nav-link">About</a>
-                    <a href="templates/service.html" class="nav-item nav-link">Service</a>
-                    <a href="templates/menu.html" class="nav-item nav-link">Menu</a>
+                    <a th:href="@{/service}" class="nav-item nav-link">Service</a>
+                    <a th:href="@{/menu}" class="nav-item nav-link">Menu</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="templates/booking.html" class="dropdown-item">Booking</a>
-                            <a href="templates/team.html" class="dropdown-item">Our Team</a>
-                            <a href="templates/testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="#" class="dropdown-item" th:href="@{/booking}">Booking</a>
+                            <a href="#" class="dropdown-item" th:href="@{/team}">Our Team</a>
+                            <a href="#" class="dropdown-item" th:href="@{/testimonial}">Testimonial</a>
                         </div>
                     </div>
-                    <a href="templates/contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="#" class="nav-item nav-link" th:href="@{/contact}">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+                <a href="#" class="btn btn-primary py-2 px-4">Book A Table</a>
             </div>
         </nav>
 
@@ -750,8 +750,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" th:href="@{/about}">About Us</a>
+                    <a class="btn btn-link" th:href="@{/contact}">Contact Us</a>
                     <a class="btn btn-link" href="">Reservation</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
