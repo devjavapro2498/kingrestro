@@ -1,8 +1,6 @@
 package com.kr.kingrestro.entity;
 
 import jakarta.persistence.*;
-
-import java.sql.Date;
 @Entity
 @Table(name = "Booking_Details")
 public class BookingEntity {
