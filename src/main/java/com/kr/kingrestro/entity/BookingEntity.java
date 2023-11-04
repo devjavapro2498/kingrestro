@@ -1,6 +1,7 @@
 package com.kr.kingrestro.entity;
 
 import jakarta.persistence.*;
+
 @Entity
 @Table(name = "Booking_Details")
 public class BookingEntity {
@@ -8,10 +9,10 @@ public class BookingEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private  String email;
-    private  String  datetime;
-    private  int noOfPeople;
-    private  String message;
+    private String email;
+    private String datetime;
+    private int noOfPeople;
+    private String message;
 
     public BookingEntity() {
         super();

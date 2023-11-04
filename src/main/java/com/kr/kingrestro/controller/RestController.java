@@ -15,6 +15,7 @@ public class RestController {
 
     @Autowired
     KingRestroService kingRestroService;
+
     @GetMapping("/")
     public String index(Model model) {
         try {
@@ -25,6 +26,7 @@ public class RestController {
             return "error";
         }
     }
+
     @GetMapping("/about")
     public String about(Model model) {
         try {
@@ -35,11 +37,12 @@ public class RestController {
             return "error";
         }
     }
+
     @GetMapping("/service")
-    public String ServiceAvail(Model model){
-        try{
+    public String ServiceAvail(Model model) {
+        try {
             return "service";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
         }
@@ -47,10 +50,10 @@ public class RestController {
     }
 
     @GetMapping("/menu")
-    public String MenuDetails(Model model){
-        try{
+    public String MenuDetails(Model model) {
+        try {
             return "menu";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
         }
@@ -59,10 +62,10 @@ public class RestController {
 
 
     @GetMapping("/booking")
-    public String Bookings(Model model){
-        try{
+    public String Bookings(Model model) {
+        try {
             return "booking";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
 
@@ -70,30 +73,32 @@ public class RestController {
     }
 
     @GetMapping("/team")
-    public String Team(Model model){
-        try{
+    public String Team(Model model) {
+        try {
             return "team";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
 
         }
     }
+
     @GetMapping("/testimonial")
-    public String Testimonials(Model model){
-        try{
+    public String Testimonials(Model model) {
+        try {
             return "testimonial";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
 
         }
     }
+
     @GetMapping("/contact")
-    public String ContactDetails(Model model){
-        try{
+    public String ContactDetails(Model model) {
+        try {
             return "contact";
-        }catch (Exception e){
+        } catch (Exception e) {
             model.addAttribute("errorMessage", "An error occurred while processing the template.");
             return "error";
 

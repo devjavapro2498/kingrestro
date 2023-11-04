@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http:www.thymeleaf.org" th:fragment="layout(content)" >
+<html lang="en" th:fragment="layout(content)" xmlns:th="http:www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -12,31 +12,33 @@
     <link href="resources/img/nk.jpg" rel="icon"/>
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link th:href="@{/lib/animate/animate.min.css}" rel="stylesheet">
-    <link th:href="@{/lib/owlcarousel/assets/owl.carousel.min.css}" rel="stylesheet">
-    <link th:href="@{/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/lib/animate/animate.min.css}">
+    <link rel="stylesheet" th:href="@{/lib/owlcarousel/assets/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 
     <!-- Template Stylesheet -->
-    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
 <div class="container-xxl bg-white p-0">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+         id="spinner">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -46,31 +48,31 @@
     <!-- Navbar & Hero Start -->
     <div class="container-xxl position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
+            <a class="navbar-brand p-0" href="">
                 <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>King Restaurant</h1>
                 <!-- <img  th:src="@{/img/logo.png}" alt="Logo"> -->
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 pe-4">
                     <!--th:href="@{/about/}"-->
-                    <a th:href="@{/}" class="nav-item nav-link active">Home</a>
-                    <a th:href="@{/about}"  class="nav-item nav-link">About</a>
-                    <a th:href="@{/service}" class="nav-item nav-link">Service</a>
-                    <a th:href="@{/menu}" class="nav-item nav-link">Menu</a>
+                    <a class="nav-item nav-link active" th:href="@{/}">Home</a>
+                    <a class="nav-item nav-link" th:href="@{/about}">About</a>
+                    <a class="nav-item nav-link" th:href="@{/service}">Service</a>
+                    <a class="nav-item nav-link" th:href="@{/menu}">Menu</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item" th:href="@{/booking}">Booking</a>
-                            <a href="#" class="dropdown-item" th:href="@{/team}">Our Team</a>
-                            <a href="#" class="dropdown-item" th:href="@{/testimonial}">Testimonial</a>
+                            <a class="dropdown-item" href="#" th:href="@{/booking}">Booking</a>
+                            <a class="dropdown-item" href="#" th:href="@{/team}">Our Team</a>
+                            <a class="dropdown-item" href="#" th:href="@{/testimonial}">Testimonial</a>
                         </div>
                     </div>
-                    <a href="#" class="nav-item nav-link" th:href="@{/contact}">Contact</a>
+                    <a class="nav-item nav-link" href="#" th:href="@{/contact}">Contact</a>
                 </div>
-                <a href="#" class="btn btn-primary py-2 px-4">Book A Table</a>
+                <a class="btn btn-primary py-2 px-4" href="#">Book A Table</a>
             </div>
         </nav>
 
@@ -79,11 +81,12 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 text-center text-lg-start">
                         <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                        <p class="text-white animated slideInLeft mb-4 pb-2">Try our world Delicious food category in our restaurant with best sitting facility.Try more eat more</p>
-                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                        <p class="text-white animated slideInLeft mb-4 pb-2">Try our world Delicious food category in
+                            our restaurant with best sitting facility.Try more eat more</p>
+                        <a class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" href="">Book A Table</a>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                        <img class="img-fluid"  th:src="@{/img/hero.png}" alt="">
+                        <img alt="" class="img-fluid" th:src="@{/img/hero.png}">
                     </div>
                 </div>
             </div>
@@ -110,7 +113,8 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                             <h5>Quality Food</h5>
-                            <p>Nitish Restaurant offers delicious and high-quality food, made with fresh ingredients and expertly prepared by skilled chefs.</p>
+                            <p>Nitish Restaurant offers delicious and high-quality food, made with fresh ingredients and
+                                expertly prepared by skilled chefs.</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,8 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
                             <h5>Online Order</h5>
-                            <p>With Nitish King Restaurant's easy-to-use online ordering system, you can enjoy their mouth-watering dishes from the comfort of your own home in just a few clicks.</p>
+                            <p>With Nitish King Restaurant's easy-to-use online ordering system, you can enjoy their
+                                mouth-watering dishes from the comfort of your own home in just a few clicks.</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +133,9 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-headset text-primary mb-4"></i>
                             <h5>24/7 Service</h5>
-                            <p>Nitish King Restaurant provides round-the-clock service, allowing you to indulge in their delectable cuisine at any time of day or night, with unlimited options to satisfy your cravings.</p>
+                            <p>Nitish King Restaurant provides round-the-clock service, allowing you to indulge in their
+                                delectable cuisine at any time of day or night, with unlimited options to satisfy your
+                                cravings.</p>
                         </div>
                     </div>
                 </div>
@@ -145,24 +152,35 @@
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"  th:src="@{/img/about-1.jpg}">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+                                 th:src="@{/img/about-1.jpg}">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"  th:src="@{/img/about-2.jpg}" style="margin-top: 25%;">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
+                                 style="margin-top: 25%;" th:src="@{/img/about-2.jpg}">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"  th:src="@{/img/about-3.jpg}">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                                 th:src="@{/img/about-3.jpg}">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"  th:src="@{/img/about-4.jpg}">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                                 th:src="@{/img/about-4.jpg}">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Nitish King Restaurant</h1>
-                    <p class="mb-4">Welcome to Nitish King Restaurant, where we offer an unparalleled culinary experience that will tantalize your taste buds and leave you craving more. Our skilled chefs use only the freshest ingredients to create dishes that are bursting with flavor and made to perfection.</p>
-                    <p class="mb-4"> With round-the-clock service and an easy-to-use online ordering system, you can enjoy our delectable cuisine from the comfort of your own home or dine in our inviting and stylish restaurant. Come and experience the best of what Nitish King Restaurant has to offer!</p>
+                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Nitish King Restaurant
+                    </h1>
+                    <p class="mb-4">Welcome to Nitish King Restaurant, where we offer an unparalleled culinary
+                        experience that will tantalize your taste buds and leave you craving more. Our skilled chefs use
+                        only the freshest ingredients to create dishes that are bursting with flavor and made to
+                        perfection.</p>
+                    <p class="mb-4"> With round-the-clock service and an easy-to-use online ordering system, you can
+                        enjoy our delectable cuisine from the comfort of your own home or dine in our inviting and
+                        stylish restaurant. Come and experience the best of what Nitish King Restaurant has to
+                        offer!</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -201,7 +219,8 @@
             <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                     <li class="nav-item">
-                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                           href="#tab-1">
                             <i class="fa fa-coffee fa-2x text-primary"></i>
                             <div class="ps-3">
                                 <small class="text-body">Popular</small>
@@ -219,7 +238,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                           href="#tab-3">
                             <i class="fa fa-utensils fa-2x text-primary"></i>
                             <div class="ps-3">
                                 <small class="text-body">Lovely</small>
@@ -229,301 +249,362 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="tab-pane fade show p-0 active" id="tab-1">
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-1.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-1.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken Burger</span>
                                             <span class="text-primary">Rs-200/.</span>
                                         </h5>
-                                        <small class="fst-italic"> chicken burger is a popular sandwich made with a juicy, tender chicken patty, lettuce, tomato, onion, and condiments on a bun.</small>
+                                        <small class="fst-italic"> chicken burger is a popular sandwich made with a
+                                            juicy, tender chicken patty, lettuce, tomato, onion, and condiments on a
+                                            bun.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-2.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-2.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Tikki chlaa</span>
                                             <span class="text-primary">Rs-330/.</span>
                                         </h5>
-                                        <small class="fst-italic">Tikki chana is a popular Indian street food dish made with crispy potato patties topped with spiced chickpeas, chutneys, and onions.</small>
+                                        <small class="fst-italic">Tikki chana is a popular Indian street food dish made
+                                            with crispy potato patties topped with spiced chickpeas, chutneys, and
+                                            onions.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-3.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-3.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Grilled chicken</span>
                                             <span class="text-primary">Rs-160/.</span>
                                         </h5>
-                                        <small class="fst-italic">grilled sandwich is a delicious meal made by toasting bread with fillings such as cheese, meat, or veggies.</small>
+                                        <small class="fst-italic">grilled sandwich is a delicious meal made by toasting
+                                            bread with fillings such as cheese, meat, or veggies.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-4.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-4.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Spaghetti Bolognese</span>
                                             <span class="text-primary">Rs-640/.</span>
                                         </h5>
-                                        <small class="fst-italic">Spaghetti Bolognese is a classic Italian dish featuring spaghetti pasta with a rich tomato-based meat sauce.</small>
+                                        <small class="fst-italic">Spaghetti Bolognese is a classic Italian dish
+                                            featuring spaghetti pasta with a rich tomato-based meat sauce.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-5.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-5.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Margherita pizza</span>
                                             <span class="text-primary">Rs-790/.</span>
                                         </h5>
-                                        <small class="fst-italic">Margherita pizza from Nitish King Restaurant is a simple yet delicious pizza with tomato sauce, mozzarella cheese, and fresh basil.</small>
+                                        <small class="fst-italic">Margherita pizza from Nitish King Restaurant is a
+                                            simple yet delicious pizza with tomato sauce, mozzarella cheese, and fresh
+                                            basil.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-6.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-6.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Pad Thai</span>
                                             <span class="text-primary">Rs-540/.</span>
                                         </h5>
-                                        <small class="fst-italic">Pad Thai from Nitish King Restaurant is a popular Thai dish featuring stir-fried noodles with shrimp, tofu, peanuts, and vegetables.</small>
+                                        <small class="fst-italic">Pad Thai from Nitish King Restaurant is a popular Thai
+                                            dish featuring stir-fried noodles with shrimp, tofu, peanuts, and
+                                            vegetables.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-7.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-7.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Sushi</span>
                                             <span class="text-primary">Rs-610/.</span>
                                         </h5>
-                                        <small class="fst-italic">Sushi from Nitish King Restaurant is a Japanese delicacy made with fresh, high-quality fish and rice, expertly prepared by skilled chefs.</small>
+                                        <small class="fst-italic">Sushi from Nitish King Restaurant is a Japanese
+                                            delicacy made with fresh, high-quality fish and rice, expertly prepared by
+                                            skilled chefs.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-8.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-8.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Caesar salad</span>
                                             <span class="text-primary">Rs-340/.</span>
                                         </h5>
-                                        <small class="fst-italic">Caesar salad from Nitish King Restaurant is a classic salad with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</small>
+                                        <small class="fst-italic">Caesar salad from Nitish King Restaurant is a classic
+                                            salad with romaine lettuce, croutons, parmesan cheese, and Caesar
+                                            dressing.</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="tab-pane fade show p-0" id="tab-2">
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-1.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-1.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken tikka masalar</span>
                                             <span class="text-primary">Rs-560/.</span>
                                         </h5>
-                                        <small class="fst-italic">Caesar salad from Nitish King Restaurant is a classic salad with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</small>
+                                        <small class="fst-italic">Caesar salad from Nitish King Restaurant is a classic
+                                            salad with romaine lettuce, croutons, parmesan cheese, and Caesar
+                                            dressing.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-2.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-2.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Lobster bisque</span>
                                             <span class="text-primary">Rs-240/.</span>
                                         </h5>
-                                        <small class="fst-italic">lobster from Nitish King Restaurant is a popular Thai dish featuring stir-fried noodles with shrimp, tofu, peanuts, and vegetables.</small>
+                                        <small class="fst-italic">lobster from Nitish King Restaurant is a popular Thai
+                                            dish featuring stir-fried noodles with shrimp, tofu, peanuts, and
+                                            vegetables.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-3.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-3.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken Burger</span>
                                             <span class="text-primary">Rs-450/.</span>
                                         </h5>
-                                        <small class="fst-italic">chicken burger is a popular Indian street food dish made with crispy potato patties topped with spiced chickpeas, chutneys, and onions.</small>
+                                        <small class="fst-italic">chicken burger is a popular Indian street food dish
+                                            made with crispy potato patties topped with spiced chickpeas, chutneys, and
+                                            onions.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-4.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-4.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Falafel wrap</span>
                                             <span class="text-primary">Rs-590/.</span>
                                         </h5>
-                                        <small class="fst-italic">wrap pizza from Nitish King Restaurant is a simple yet delicious pizza with tomato sauce, mozzarella cheese, and fresh basil.</small>
+                                        <small class="fst-italic">wrap pizza from Nitish King Restaurant is a simple yet
+                                            delicious pizza with tomato sauce, mozzarella cheese, and fresh
+                                            basil.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-5.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-5.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken Burger</span>
                                             <span class="text-primary">Rs-450/.</span>
                                         </h5>
-                                        <small class="fst-italic">Chicken burger dish featuring stir-fried noodles with shrimp, tofu, peanuts, and vegetables.</small>
+                                        <small class="fst-italic">Chicken burger dish featuring stir-fried noodles with
+                                            shrimp, tofu, peanuts, and vegetables.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-6.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-6.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Peking duck</span>
                                             <span class="text-primary">Rs-500/</span>
                                         </h5>
-                                        <small class="fst-italic">Peking duck is a raniway e with fresh, high-quality fish and rice, expertly prepared by best subway.</small>
+                                        <small class="fst-italic">Peking duck is a raniway e with fresh, high-quality
+                                            fish and rice, expertly prepared by best subway.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-7.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-7.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Gnocchi</span>
                                             <span class="text-primary">Rs-760/.</span>
                                         </h5>
-                                        <small class="fst-italic">GNoochi from nitish restaurant is a Indian delicacy made with fresh, high-quality fish and rice, expertly prepared by skilled chefs.</small>
+                                        <small class="fst-italic">GNoochi from nitish restaurant is a Indian delicacy
+                                            made with fresh, high-quality fish and rice, expertly prepared by skilled
+                                            chefs.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-8.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-8.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Beef burger</span>
                                             <span class="text-primary">Rs-276/.</span>
                                         </h5>
-                                        <small class="fst-italic">Burgeris a popular Italian dish featuring a crispy crust topped with tomato sauce, cheese, and a variety of toppings.</small>
+                                        <small class="fst-italic">Burgeris a popular Italian dish featuring a crispy
+                                            crust topped with tomato sauce, cheese, and a variety of toppings.</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="tab-3" class="tab-pane fade show p-0">
+                    <div class="tab-pane fade show p-0" id="tab-3">
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-1.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-1.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken wings</span>
                                             <span class="text-primary">Rs-560/.</span>
                                         </h5>
-                                        <small class="fst-italic">chicken wings is a popular Italian dish featuring a crunchy with tomato sauce, garlic and a variety of toppings.</small>
+                                        <small class="fst-italic">chicken wings is a popular Italian dish featuring a
+                                            crunchy with tomato sauce, garlic and a variety of toppings.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-2.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-2.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Clam chowder</span>
                                             <span class="text-primary">Rs-100/.</span>
                                         </h5>
-                                        <small class="fst-italic">Clam chowder is a creamy soup made with clams, potatoes, and vegetables.</small>
+                                        <small class="fst-italic">Clam chowder is a creamy soup made with clams,
+                                            potatoes, and vegetables.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-3.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-3.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Moussaka</span>
                                             <span class="text-primary">Rs-207/.</span>
                                         </h5>
-                                        <small class="fst-italic">MOusakka from Nitish King Restaurant is a Japanese delicacy made with fresh, and sweet high-quality fish and rice, expertly prepared by skilled chefs.</small>
+                                        <small class="fst-italic">MOusakka from Nitish King Restaurant is a Japanese
+                                            delicacy made with fresh, and sweet high-quality fish and rice, expertly
+                                            prepared by skilled chefs.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-4.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-4.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Moussaka</span>
                                             <span class="text-primary">Rs-280/.</span>
                                         </h5>
-                                        <small class="fst-italic">Mousakaa is a creamy soup made with clams, potatoes, Garlic with top sweengs and vegetables.</small>
+                                        <small class="fst-italic">Mousakaa is a creamy soup made with clams, potatoes,
+                                            Garlic with top sweengs and vegetables.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-5.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-5.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken Burger</span>
                                             <span class="text-primary">Rs-200/.</span>
                                         </h5>
-                                        <small class="fst-italic">Chicken burger from nitish King Restaurant is a Japanese delicacy made with fresh, high-quality fish and rice, expertly prepared by skilled chefs.</small>
+                                        <small class="fst-italic">Chicken burger from nitish King Restaurant is a
+                                            Japanese delicacy made with fresh, high-quality fish and rice, expertly
+                                            prepared by skilled chefs.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-6.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-6.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Chicken enchiladas</span>
                                             <span class="text-primary">Rs-250/.</span>
                                         </h5>
-                                        <small class="fst-italic">Chicken chatney creamy soup made with clams, potatoes, and vegetables.Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Chicken chatney creamy soup made with clams, potatoes,
+                                            and vegetables.Ipsum ipsum clita erat amet dolor justo diam</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-7.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-7.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Roasted vegetables</span>
                                             <span class="text-primary">Rs-800/.</span>
                                         </h5>
-                                        <small class="fst-italic">Roasted vegetables is a creamy soup made with clams, potatoes, and vegetables. with the water purifier.</small>
+                                        <small class="fst-italic">Roasted vegetables is a creamy soup made with clams,
+                                            potatoes, and vegetables. with the water purifier.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded"  th:src="@{/img/menu-8.jpg}" alt="" style="width: 80px;">
+                                    <img alt="" class="flex-shrink-0 img-fluid rounded" style="width: 80px;"
+                                         th:src="@{/img/menu-8.jpg}">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                                             <span>Beef stroganoff</span>
                                             <span class="text-primary">Rs-800/.</span>
                                         </h5>
-                                        <small class="fst-italic">Clam chowder is a creamy soup made with clams, potatoes, and vegetables.</small>
+                                        <small class="fst-italic">Clam chowder is a creamy soup made with clams,
+                                            potatoes, and vegetables.</small>
                                     </div>
                                 </div>
                             </div>
@@ -541,7 +622,8 @@
         <div class="row g-0">
             <div class="col-md-6">
                 <div class="video">
-                    <button type="button" class="btn-play" data-bs-toggle="modal" data- src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                    <button class="btn-play" data- data-bs-target="#videoModal" data-bs-toggle="modal"
+                            src="https://www.youtube.com/embed/DWRcNpR6Kdc" type="button">
                         <span></span>
                     </button>
                 </div>
@@ -550,23 +632,28 @@
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table Online</h1>
-                    <form th:action="@{/reservation}" method="post">
+                    <form method="post" th:action="@{/reservation}">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name"  name="name" placeholder="Your Name">
+                                    <input class="form-control" id="name" name="name" placeholder="Your Name"
+                                           type="text">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email"  name="email"placeholder="Your Email">
+                                    <input class="form-control" id="email" name="email" placeholder="Your Email"
+                                           type="email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime" name="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                <div class="form-floating date" data-target-input="nearest" id="date3">
+                                    <input class="form-control datetimepicker-input" data-target="#date3"
+                                           data-toggle="datetimepicker"
+                                           id="datetime" name="datetime" placeholder="Date & Time"
+                                           type="text"/>
                                     <label for="datetime">Date & Time</label>
                                 </div>
                             </div>
@@ -582,7 +669,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message" name="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" id="message" name="message"
+                                              placeholder="Special Request" style="height: 100px"></textarea>
                                     <label for="message">Special Request</label>
                                 </div>
                             </div>
@@ -596,18 +684,20 @@
         </div>
     </div>
 
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="videoModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <!-- 16:9 aspect ratio -->
                     <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item"  src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+                        <iframe allow="autoplay" allowfullscreen allowscriptaccess="always"
+                                class="embed-responsive-item"
+                                id="video"
+                                src=""></iframe>
                     </div>
                 </div>
             </div>
@@ -627,7 +717,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item text-center rounded overflow-hidden">
                         <div class="rounded-circle overflow-hidden m-4">
-                            <img class="img-fluid"  th:src="@{/img/team-1.jpg}" alt="">
+                            <img alt="" class="img-fluid" th:src="@{/img/team-1.jpg}">
                         </div>
                         <h5 class="mb-0">Manipal Singh</h5>
                         <small>New York</small>
@@ -641,7 +731,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item text-center rounded overflow-hidden">
                         <div class="rounded-circle overflow-hidden m-4">
-                            <img class="img-fluid"  th:src="@{/img/team-2.jpg}" alt="">
+                            <img alt="" class="img-fluid" th:src="@{/img/team-2.jpg}">
                         </div>
                         <h5 class="mb-0">Kevin Worn</h5>
                         <small>Sydney</small>
@@ -655,7 +745,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item text-center rounded overflow-hidden">
                         <div class="rounded-circle overflow-hidden m-4">
-                            <img class="img-fluid"  th:src="@{/img/team-3.jpg}" alt="">
+                            <img alt="" class="img-fluid" th:src="@{/img/team-3.jpg}">
                         </div>
                         <h5 class="mb-0">Mark Dahiya</h5>
                         <small>Mumbai</small>
@@ -669,7 +759,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item text-center rounded overflow-hidden">
                         <div class="rounded-circle overflow-hidden m-4">
-                            <img class="img-fluid"  th:src="@{/img/team-4.jpg}" alt="">
+                            <img alt="" class="img-fluid" th:src="@{/img/team-4.jpg}">
                         </div>
                         <h5 class="mb-0">Rocky Gill</h5>
                         <small>Punjab</small>
@@ -698,7 +788,8 @@
                     <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                     <p>Best food serving restaurant in the world</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle"  th:src="@{/img/testimonial-1.jpg}" style="width: 50px; height: 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"
+                             th:src="@{/img/testimonial-1.jpg}">
                         <div class="ps-3">
                             <h5 class="mb-1">Marina duke</h5>
                             <small>Teacher</small>
@@ -709,7 +800,8 @@
                     <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                     <p>When I visited in this restaurant I feel Joy and happy because the food was delicious taste.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle"  th:src="@{/img/testimonial-2.jpg}" style="width: 50px; height: 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"
+                             th:src="@{/img/testimonial-2.jpg}">
                         <div class="ps-3">
                             <h5 class="mb-1">Kamjot Singh</h5>
                             <small>Lawyer</small>
@@ -720,7 +812,8 @@
                     <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                     <p>Delicious food and amazing sitting facilities in this world class hotel.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle"  th:src="@{/img/testimonial-3.jpg}" style="width: 50px; height: 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"
+                             th:src="@{/img/testimonial-3.jpg}">
                         <div class="ps-3">
                             <h5 class="mb-1">Hitesh Ahalawat</h5>
                             <small>Student</small>
@@ -731,7 +824,8 @@
                     <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                     <p>Sex on the beach was amazing dish anyway! Best restaurant in my city.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle"  th:src="@{/img/testimonial-4.jpg}" style="width: 50px; height: 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"
+                             th:src="@{/img/testimonial-4.jpg}">
                         <div class="ps-3">
                             <h5 class="mb-1">William Honsey</h5>
                             <small>Driver</small>
@@ -762,10 +856,16 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 981-7188-259</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>nitishmalik000@.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/login/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/nitish-malik-4ba10825a/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                           href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                           target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/login/"
+                           target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                           href="https://www.linkedin.com/in/nitish-malik-4ba10825a/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -779,8 +879,11 @@
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                     <p>Subscribe for more latest updates and dishes.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your email"
+                               type="text">
+                        <button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" type="button">
+                            SignUp
+                        </button>
                     </div>
                 </div>
             </div>
@@ -809,24 +912,24 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#"><i class="bi bi-arrow-up"></i></a>
 </div>
 
 <!-- JavaScript Libraries -->
-<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script  th:src="@{/lib/wow/wow.min.js}"></script>
-<script  th:src="@{/lib/easing/easing.min.js}"></script>
-<script  th:src="@{/lib/waypoints/waypoints.min.js}"></script>
-<script  th:src="@{/lib/counterup/counterup.min.js}"></script>
-<script  th:src="@{/lib/owlcarousel/owl.carousel.min.js}"></script>
-<script  th:src="@{/lib/tempusdominus/js/moment.min.js}"></script>
-<script  th:src="@{/lib/tempusdominus/js/moment-timezone.min.js}"></script>
-<script  th:src="@{/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/lib/wow/wow.min.js}"></script>
+<script th:src="@{/lib/easing/easing.min.js}"></script>
+<script th:src="@{/lib/waypoints/waypoints.min.js}"></script>
+<script th:src="@{/lib/counterup/counterup.min.js}"></script>
+<script th:src="@{/lib/owlcarousel/owl.carousel.min.js}"></script>
+<script th:src="@{/lib/tempusdominus/js/moment.min.js}"></script>
+<script th:src="@{/lib/tempusdominus/js/moment-timezone.min.js}"></script>
+<script th:src="@{/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js}"></script>
 
 <!-- th:src="@{/javascript/script.js}"-->
 
-<script  th:src="@{/js/main.js}"></script>
+<script th:src="@{/js/main.js}"></script>
 </body>
 
 </html>
